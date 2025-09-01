@@ -55,6 +55,23 @@
 </head>
 <body class="bg-gray-900 text-white">
 
+    <!-- Menu de Navegação -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">De RR para COP30</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-white">Sobre</a>
+                <a href="#projects" class="text-gray-300 hover:text-white">Projetos</a>
+                <a href="#sponsorship" class="text-gray-300 hover:text-white">Patrocínio</a>
+                <a href="#supporters" class="text-gray-300 hover:text-white">Apoiadores</a>
+                <a href="#faq" class="text-gray-300 hover:text-white">FAQ</a>
+            </div>
+            <button onclick="openDonationModal()" class="bg-green-500 hover:bg-green-600 text-gray-900 font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+                Doar
+            </button>
+        </div>
+    </nav>
+
     <!-- Modal de Doação -->
     <div id="donation-modal" class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden opacity-0">
         <div class="modal-content bg-gray-800 rounded-lg shadow-2xl p-8 max-w-sm w-full mx-4 transform scale-95 opacity-0" id="donation-modal-content">
@@ -78,7 +95,7 @@
     <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden opacity-0 p-4">
         <div class="modal-content bg-gray-800 rounded-lg shadow-2xl max-w-2xl w-full mx-auto transform scale-95 opacity-0 overflow-y-auto max-h-full" id="project-modal-content">
             <div class="p-8">
-                <h2 id="modal-project-title" class="text-3xl font-bold mb-4 text-green-400"></h2>
+                <h2 id="modal-project-title" class="text-3xl font-bold mb-4"></h2>
                 <p id="modal-project-description" class="text-gray-300 mb-6"></p>
                 
                 <div class="border-t border-gray-700 pt-4 mb-4">
@@ -135,7 +152,7 @@
         <section id="goal" class="py-16 reveal">
             <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg p-8 shadow-lg">
                 <h2 class="text-3xl font-bold text-center mb-2">Nossa Meta</h2>
-                <p class="text-center text-gray-400 mb-8">Estamos trabalhando para arrecadar R$ 10.000,00 para cobrir os custos da nossa viagem!</p>
+                <p class="text-center text-gray-400 mb-8">Estamos empenhados em levantar R$ 10.000,00 para arcar com as despesas da nossa jornada!</p>
                 <div class="w-full bg-gray-700 rounded-full h-8">
                     <div id="progress-bar" class="bg-gradient-to-r from-green-400 to-blue-500 h-8 rounded-full text-center text-gray-900 font-bold leading-8 transition-all duration-1000 ease-out" style="width: 0%;">
                         <span id="progress-percentage">50%</span>
@@ -203,13 +220,14 @@
                     data-dimension="Institucional"
                     data-ods="9,17"
                     data-proposal="Plataforma digital que conecta projetos sustentáveis a investidores, promovendo a visibilidade das iniciativas, facilitando o acesso a recursos e incentivando o investimento consciente alinhado aos Objetivos de Desenvolvimento Sustentável (ODS)."
-                    data-images="https://i.postimg.cc/sDSggRCd/Invest-Verde3.jpg,https://i.postimg.cc/Y0V0kfYY/invest-Verde-M.png">
+                    data-images="https://i.postimg.cc/sDSggRCd/Invest-Verde3.jpg,https://i.postimg.cc/Y0V0kfYY/invest-Verde-M.png"
+                    data-color-class="text-teal-400">
                     <img src="https://i.postimg.cc/26vHzKDF/invest-Verde-B.png" alt="Imagem do Projeto 1" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-teal-400">InvestVerde</h3>
-                        <p class="text-gray-400 flex-grow">Plataforma para impulsionar projetos verdes e investimento de impacto.</p>
+                        <p class="text-gray-300 flex-grow">Plataforma para impulsionar projetos verdes e investimento de impacto.</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-sm text-gray-500 mb-2">Dimensão: <span class="font-semibold text-gray-300">Institucional</span></p>
+                            <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Institucional</span></p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 9</span>
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 17</span>
@@ -226,13 +244,14 @@
                     data-dimension="Ambiental"
                     data-ods="4,7,12,13"
                     data-proposal="O BioStart é um aplicativo acessível e interativo que visa promover o uso do biogás como energia limpa em áreas rurais, capacitando produtores, estudantes e técnicos a converter resíduos orgânicos em energia, incentivando autonomia, economia e sustentabilidade."
-                    data-images="https://i.postimg.cc/bvYSknCx/Bio-Start1.jpg,https://i.postimg.cc/nztXL8BS/bio-Start-M.jpg">
+                    data-images="https://i.postimg.cc/bvYSknCx/Bio-Start1.jpg,https://i.postimg.cc/nztXL8BS/bio-Start-M.jpg"
+                    data-color-class="text-green-500">
                     <img src="https://i.postimg.cc/dDcCvJFw/bio-Start-B.png" alt="Imagem do Projeto 2" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-green-500">BioStart</h3>
-                        <p class="text-gray-400 flex-grow">Guia Interativo para Produção de Biogás com Resíduos Orgânicos.</p>
+                        <p class="text-gray-300 flex-grow">Guia Interativo para Produção de Biogás com Resíduos Orgânicos.</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-sm text-gray-500 mb-2">Dimensão: <span class="font-semibold text-gray-300">Ambiental</span></p>
+                            <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Ambiental</span></p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 4</span>
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 7</span>
@@ -251,13 +270,14 @@
                     data-dimension="Social"
                     data-ods="2,11,12"
                     data-proposal="Feira na Palma é uma plataforma digital que visa conectar pequenos produtores rurais e feirantes locais diretamente a consumidores urbanos. A proposta possibilita aos produtores familiares comercializarem hortaliças e produtos agroecológicos por meio inclusão digital incentivando o consumo sustentável  e consciente."
-                    data-images="https://i.postimg.cc/CM9K0xts/Feira-Na-Palma1.jpg,https://i.postimg.cc/pdc0NZjd/feira-Na-Palma-W.jpg,https://i.postimg.cc/xCk69zG3/feira-Na-Palma-M.jpg">
+                    data-images="https://i.postimg.cc/CM9K0xts/Feira-Na-Palma1.jpg,https://i.postimg.cc/pdc0NZjd/feira-Na-Palma-W.jpg,https://i.postimg.cc/xCk69zG3/feira-Na-Palma-M.jpg"
+                    data-color-class="text-green-400">
                     <img src="https://i.postimg.cc/0jzbg2yX/feira-Na-Palma-B.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-green-400">Feira na Palma</h3>
-                        <p class="text-gray-400 flex-grow">Plataforma Digital para comercialização de produtos e Fortalecimento do Pequeno Produtor de Hortaliças</p>
+                        <p class="text-gray-300 flex-grow">Plataforma Digital para comercialização de produtos e Fortalecimento do Pequeno Produtor de Hortaliças</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-sm text-gray-500 mb-2">Dimensão: <span class="font-semibold text-gray-300">Social</span></p>
+                            <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Social</span></p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 2</span>
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 11</span>
@@ -274,13 +294,14 @@
                     data-dimension="Ambiental"
                     data-ods="7,12"
                     data-proposal="A EcoEnergia é uma plataforma digital que proporciona aos consumidores uma ferramenta digital que traduza informações complexas sobre consumo em dados claros e objetivos, incentivando hábitos mais sustentáveis e a redução de custos."
-                    data-images="https://i.postimg.cc/9XDfs7xf/Eco-Energia1.jpg,https://i.postimg.cc/NfjyyK4q/dashboard-Eco-Energia.png,https://i.postimg.cc/050XykW6/eco-Energia-M.png">
+                    data-images="https://i.postimg.cc/9XDfs7xf/Eco-Energia1.jpg,https://i.postimg.cc/NfjyyK4q/dashboard-Eco-Energia.png,https://i.postimg.cc/050XykW6/eco-Energia-M.png"
+                    data-color-class="text-blue-400">
                     <img src="https://i.postimg.cc/T3CQ0CBd/eco-Energia-B.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-blue-400">EcoEnergia</h3>
-                        <p class="text-gray-400 flex-grow">Aplicação para Monitoramento, Controle e Conscientização sobre o Consumo de Energia Elétrica Residencial</p>
+                        <p class="text-gray-300 flex-grow">Aplicação para Monitoramento, Controle e Conscientização sobre o Consumo de Energia Elétrica Residencial</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-sm text-gray-500 mb-2">Dimensão: <span class="font-semibold text-gray-300">Ambiental</span></p>
+                            <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Ambiental</span></p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 7</span>
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 12</span>
@@ -296,13 +317,14 @@
                     data-dimension="Econômica"
                     data-ods="4,11,12"
                     data-proposal="EcoWeb é uma plataforma que conecta empresas com resíduos recicláveis a usuários interessados em reutilizá-los, estimulando iniciativas sustentáveis, criativas e colaborativas."
-                    data-images="https://i.postimg.cc/SxH02n6g/EcoWeb1.jpg,https://i.postimg.cc/Dw9ZCVjf/ecoWebM.jpg">
+                    data-images="https://i.postimg.cc/SxH02n6g/EcoWeb1.jpg,https://i.postimg.cc/Dw9ZCVjf/ecoWebM.jpg"
+                    data-color-class="text-lime-400">
                     <img src="https://i.postimg.cc/bJt1bTQw/ecoWebB.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-lime-400">EcoWeb</h3>
-                        <p class="text-gray-400 flex-grow">Plataforma Digital para Reutilização Criativa e Conexão de Resíduos Sustentáveis</p>
+                        <p class="text-gray-300 flex-grow">Plataforma Digital para Reutilização Criativa e Conexão de Resíduos Sustentáveis</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-sm text-gray-500 mb-2">Dimensão: <span class="font-semibold text-gray-300">Econômica</span></p>
+                            <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Econômica</span></p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 4</span>
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 11</span>
@@ -319,13 +341,14 @@
                     data-dimension="Econômica"
                     data-ods="2,9,13"
                     data-proposal="O projeto propõe uma infraestrutura digital pública, voltada à gestão técnica, sanitária, produtiva e ambiental, permitindo que técnicos, produtores e gestores tenham acesso a uma plataforma unificada, intuitiva e interoperável."
-                    data-images="https://i.postimg.cc/QtCjtKXb/SUR.jpg">
+                    data-images="https://i.postimg.cc/QtCjtKXb/SUR.jpg"
+                    data-color-class="text-green-500">
                     <img src="https://i.postimg.cc/9fYjyVgn/surB.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-green-500">SUR – Sistema Único Rural</h3>
-                        <p class="text-gray-400 flex-grow">Plataforma Integrada para a Sustentabilidade no Meio Rural Amazônico.</p>
+                        <p class="text-gray-300 flex-grow">Plataforma Integrada para a Sustentabilidade no Meio Rural Amazônico.</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-sm text-gray-500 mb-2">Dimensão: <span class="font-semibold text-gray-300">Econômica</span></p>
+                            <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Econômica</span></p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 2</span>
                                 <span class="text-white text-xs font-bold px-2 py-1 rounded-full">ODS 9</span>
@@ -416,12 +439,12 @@
                     Agradecemos a todos que acreditam e investem neste sonho. Graças a vocês, estamos mais perto de Belém!
                 </p>
             </div>
-            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center ">
+            <div class="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 items-center ">
                 <!-- Logos dos Apoiadores -->
-                <img src="https://i.postimg.cc/gks7L3TH/logo-Isamar-Junior.png" alt="Apoio Dep. Isamar Junior" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300">
-                <img src="https://i.postimg.cc/Zq9wCTjx/logo-Luiza-Maura.png" alt="Apoio Pref. Luiza Maura" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300">
-                <img src="https://placehold.co/200x100/374151/9ca3af?text=Sua+Marca" alt="Logo Apoiador" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300">
-                <img src="https://placehold.co/200x100/374151/9ca3af?text=Sua+Marca" alt="Logo Apoiador" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300">
+                <img src="https://i.postimg.cc/gks7L3TH/logo-Isamar-Junior.png" alt="Apoio Dep. Isamar Junior" class="mx-auto">
+                <img src="https://i.postimg.cc/Zq9wCTjx/logo-Luiza-Maura.png" alt="Apoio Pref. Luiza Maura" class="mx-auto">
+                <img src="https://placehold.co/200x150/374151/9ca3af?text=Sua+Marca" alt="Logo Apoiador" class="mx-auto">
+                <img src="https://placehold.co/200x150/374151/9ca3af?text=Sua+Marca" alt="Logo Apoiador" class="mx-auto">
             </div>
         </section>
 
@@ -438,38 +461,70 @@
 
                 <!-- Galeria de Posts (Manual) -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                    <!-- INSTRUÇÕES: Para atualizar, troque o href pelo link do post e o src pela URL da imagem do post -->
                     <!-- Post 1 -->
                     <a href="https://www.instagram.com/stories/highlights/17844645852553573/" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
-                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Como+ajudar?" alt="Post do Instagram 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Como+ajudar?" alt="Como Ajudar?" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
                     <!-- Post 2 -->
                     <a href="https://www.instagram.com/stories/highlights/18316709935211556/" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
-                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Parceiros" alt="Post do Instagram 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Parceiros" alt="Parceiros" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
                     <!-- Post 3 -->
                     <a href="https://www.instagram.com/stories/highlights/18070563365145600/" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
-                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Quem+somos?" alt="Post do Instagram 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Quem+somos?" alt="Quem somos?" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
                     <!-- Post 4 -->
                     <a href="https://www.instagram.com/levaagntpracop.rr" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
-                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Ver+perfil" alt="Post do Instagram 4" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <img src="https://placehold.co/400x400/1a202c/ffffff?text=Ver+perfil" alt="Ver perfil" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Seção CTA Final -->
-        <section id="cta" class="bg-gray-800 rounded-lg p-10 text-center shadow-lg mt-20 reveal">
-            <h2 class="text-3xl font-bold mb-4">Faça Parte Desta História!</h2>
-            <p class="text-gray-300 max-w-2xl mx-auto mb-8">
-                Toda contribuição, de qualquer valor, é um passo a mais que damos em direção a Belém. Ajude a levar a ciência e a inovação de Roraima para um dos maiores eventos sobre o clima do mundo.
-            </p>
-            <button onclick="openDonationModal()" class="bg-green-500 hover:bg-green-600 text-gray-900 font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 shadow-lg">
-                Quero Doar Agora
-            </button>
+        <!-- Seção FAQ -->
+        <section id="faq" class="py-20 reveal">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12">Perguntas Frequentes</h2>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- Item FAQ 1 -->
+                <div class="faq-item bg-gray-800 rounded-lg overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full text-left p-6 focus:outline-none">
+                        <span class="font-semibold text-lg text-white">Como sei que minha doação será bem utilizada?</span>
+                        <span class="faq-icon text-2xl text-gray-300 transform transition-transform duration-300">-</span>
+                    </button>
+                    <div class="faq-answer max-h-screen overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="p-6 pt-0 text-gray-300 text-justify">
+                            A transparência é nosso maior compromisso! Todo o valor arrecadado será destinado exclusivamente para os custos essenciais da viagem: passagens aéreas, hospedagem e alimentação da delegação. Manteremos registros detalhados e, ao final da campanha, publicaremos uma prestação de contas em nossas redes sociais.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item FAQ 2 -->
+                <div class="faq-item bg-gray-800 rounded-lg overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full text-left p-6 focus:outline-none">
+                        <span class="font-semibold text-lg text-white">Posso ajudar de outras formas além de doar dinheiro?</span>
+                        <span class="faq-icon text-2xl text-gray-300 transform transition-transform duration-300 rotate-180">+</span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="p-6 pt-0 text-gray-300 text-justify">
+                            Com certeza! A maior ajuda, além da financeira, é a divulgação. Compartilhe o link do nosso site em suas redes sociais, em grupos de WhatsApp com amigos e familiares. Quanto mais pessoas conhecerem nossa causa, mais perto estaremos de alcançar nossa meta. Seguir e interagir em nosso  <a href="https://www.instagram.com/levaagntpracop.rr" target="_blank" class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 font-bold">Instagram (@levaagntpracop.rr)</a> também ajuda muito!
+                        </p>
+                    </div>
+                </div>
+                <!-- Item FAQ 3 -->
+                <div class="faq-item bg-gray-800 rounded-lg overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full text-left p-6 focus:outline-none">
+                        <span class="font-semibold text-lg text-white">Quem são os responsáveis pela campanha?</span>
+                        <span class="faq-icon text-2xl text-gray-300 transform transition-transform duration-300 rotate-180">+</span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="p-6 pt-0 text-gray-300 text-justify">
+                            A campanha é uma iniciativa oficial dos estudantes e professores orientadores dos cursos de Análise e Desenvolvimento de Sistemas (TADS) e Ciências Biológicas do IFRR - Campus Boa Vista. A gestão financeira é feita de forma colaborativa pela equipe, com supervisão dos orientadores para garantir a correta aplicação dos recursos.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
 
     <!-- Rodapé -->
     <footer class="bg-gray-900 border-t border-gray-700">
@@ -526,14 +581,18 @@
         // --- Funções do Modal de Projeto ---
         function openProjectModal(cardElement) {
             const data = cardElement.dataset;
+            const modalTitle = document.getElementById('modal-project-title');
             
-            document.getElementById('modal-project-title').innerText = data.title;
+            modalTitle.innerText = data.title;
+            modalTitle.className = 'text-3xl font-bold mb-4'; // Reseta as classes de cor
+            modalTitle.classList.add(data.colorClass || 'text-green-400'); // Adiciona a nova cor
+
             document.getElementById('modal-project-description').innerText = data.description;
             document.getElementById('modal-project-dimension').innerText = data.dimension;
             document.getElementById('modal-project-proposal').innerText = data.proposal;
 
             const odsContainer = document.getElementById('modal-project-ods');
-            odsContainer.innerHTML = ''; // Limpa ODSs anteriores
+            odsContainer.innerHTML = ''; 
             if (data.ods) {
                 const odsList = data.ods.split(',');
                 odsList.forEach(ods => {
@@ -661,6 +720,40 @@
             // Aplica as cores das ODS assim que a página carregar
             applyOdsColorsToCards();
 
+            // --- Lógica para Rolagem Suave do Menu ---
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const navbar = document.getElementById('navbar');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > 50) {
+                    navbar.classList.add('bg-gray-900/90', 'backdrop-blur-sm', 'shadow-lg');
+                } else {
+                    navbar.classList.remove('bg-gray-900/90', 'backdrop-blur-sm', 'shadow-lg');
+                }
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Rolar para baixo
+                    navbar.classList.add('-translate-y-full');
+                } else {
+                    // Rolar para cima
+                    navbar.classList.remove('-translate-y-full');
+                }
+                lastScrollY = currentScrollY;
+            });
+            
             // Configura a animação de scroll
             const sr = ScrollReveal({
                 distance: '50px',
@@ -681,6 +774,39 @@
             sr.reveal('#sponsorship .grid > div', {
                 origin: 'bottom',
                 interval: 150
+            });
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+
+                question.addEventListener('click', () => {
+                    const isOpen = answer.classList.contains('max-h-screen');
+
+                    // Fecha todos os outros itens
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-answer').classList.remove('max-h-screen');
+                            otherItem.querySelector('.faq-answer').classList.add('max-h-0');
+                            otherItem.querySelector('.faq-icon').classList.add('rotate-180');
+                            otherItem.querySelector('.faq-icon').innerText = '+';
+                        }
+                    });
+
+                    // Abre ou fecha o item clicado
+                    if (isOpen) {
+                        answer.classList.remove('max-h-screen');
+                        answer.classList.add('max-h-0');
+                        icon.classList.add('rotate-180');
+                        icon.innerText = '+';
+                    } else {
+                        answer.classList.remove('max-h-0');
+                        answer.classList.add('max-h-screen');
+                        icon.classList.remove('rotate-180');
+                        icon.innerText = '-';
+                    }
+                });
             });
         });
     </script>
