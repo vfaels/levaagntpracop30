@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Roraima para a COP30 | IFRR</title>
+    <meta name="description" content="Ajude estudantes de Roraima a participarem da COP30 em Belém. Apoie projetos sustentáveis e inovadores que farão a diferença no futuro do planeta.">
     <link rel="shortcut icon" href="https://i.postimg.cc/XYTGDvgh/logo-Cop30.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Biblioteca de Animação ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -56,19 +58,26 @@
 <body class="bg-gray-900 text-white">
 
     <!-- Menu de Navegação -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">De RR para COP30</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-white">Sobre</a>
-                <a href="#projects" class="text-gray-300 hover:text-white">Projetos</a>
-                <a href="#sponsorship" class="text-gray-300 hover:text-white">Patrocínio</a>
-                <a href="#supporters" class="text-gray-300 hover:text-white">Apoiadores</a>
-                <a href="#faq" class="text-gray-300 hover:text-white">FAQ</a>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out navbar-visible">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold">
+                    <span class="text-white">De RR para </span>
+                    <span class="gradient-text">COP30</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-green-400 transition-colors">Sobre</a>
+                    <a href="#projects" class="hover:text-green-400 transition-colors">Projetos</a>
+                    <a href="#sponsorship" class="hover:text-green-400 transition-colors">Patrocínio</a>
+                    <a href="#supporters" class="hover:text-green-400 transition-colors">Apoiadores</a>
+                    <a href="#faq" class="hover:text-green-400 transition-colors">FAQ</a>
+                </div>
+                
+                <button onclick="openDonationModal()" class="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 px-6 py-2 rounded-full font-semibold transition-all transform hover:scale-105">
+                    Doar
+                </button>
             </div>
-            <button onclick="openDonationModal()" class="bg-green-500 hover:bg-green-600 text-gray-900 font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
-                Doar
-            </button>
         </div>
     </nav>
 
@@ -126,35 +135,41 @@
     </div>
 
     <!-- Seção Hero -->
-    <header class="hero-bg">
-        <div class="container mx-auto px-6 py-48 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">De Roraima para a <span class="gradient-text">COP30</span></h1>
-            <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">Estudantes de TADS e Biologia do IFRR selecionados para a Mostra Tecnológica dos IFs da Região Norte em Belém-PA.</p>
-            <button onclick="openDonationModal()" class="bg-green-500 hover:bg-green-600 text-gray-900 font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 shadow-lg">
-                Apoie nosso Sonho
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                De Roraima para a <span class="gradient-text">COP30</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                Estudantes de TADS e Biologia do IFRR selecionados para a Mostra Tecnológica dos IFs da Região Norte em Belém-PA.
+            </p>
+            <button onclick="openDonationModal()" class="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 px-12 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-105">
+                Apoie Nosso Sonho
             </button>
         </div>
-    </header>
+    </section>
 
     <!-- Seção Sobre -->
-    <main class="container mx-auto px-6 py-16">
-        <section id="about" class="text-center max-w-4xl mx-auto reveal">
-            <h2 class="text-3xl font-bold mb-6">Nosso Sonho, Nossa Missão</h2>
-            <p class="text-gray-300 leading-relaxed mb-4">
-                Somos estudantes dos cursos de Análise e Desenvolvimento de Sistemas (TADS) e Ciências Biológicas do IFRR - Campus Boa Vista, e temos um grande sonho: representar Roraima na Mostra Tecnológica dos Institutos Federais da Região Norte, que acontecerá durante a COP30 em Belém-PA, de 20 a 23 de outubro.
-            </p>
-            <p class="text-gray-300 leading-relaxed">
-                Este evento é uma oportunidade única para apresentarmos projetos inovadores e sustentáveis que buscam soluções para os desafios da Amazônia e as mudanças climáticas. Com 6 projetos aprovados, nossa missão agora é arrecadar os recursos necessários para custear as passagens aéreas e a hospedagem da nossa delegação.
-            </p>
+    <main class="container mx-auto px-6 py-16 reveal">
+        <section id="about" class="text-center max-w-4xl mx-auto ">
+            <h2 class="text-5xl font-bold mb-6">Nosso Sonho, Nossa Missão</h2>
+            <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-6 text-gray-300">
+                <p>
+                    Somos estudantes dos cursos de Análise e Desenvolvimento de Sistemas (TADS) e Ciências Biológicas do IFRR - Campus Boa Vista, e temos um grande sonho: representar Roraima na Mostra Tecnológica dos Institutos Federais da Região Norte, que acontecerá durante a COP30 em Belém-PA, de 20 a 23 de outubro.
+                </p>
+                <p>
+                    Este evento é uma oportunidade única para apresentarmos projetos inovadores e sustentáveis que buscam soluções para os desafios da Amazônia e as mudanças climáticas. Com 6 projetos aprovados, nossa missão agora é arrecadar os recursos necessários para custear as passagens aéreas e a hospedagem da nossa delegação.
+                </p>
+            </div>
         </section>
 
         <!-- Seção Meta de Arrecadação -->
-        <section id="goal" class="py-16 reveal">
-            <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg p-8 shadow-lg">
-                <h2 class="text-3xl font-bold text-center mb-2">Nossa Meta</h2>
-                <p class="text-center text-gray-400 mb-8">Estamos empenhados em levantar R$ 10.000,00 para arcar com as despesas da nossa jornada!</p>
-                <div class="w-full bg-gray-700 rounded-full h-8">
-                    <div id="progress-bar" class="bg-gradient-to-r from-green-400 to-blue-500 h-8 rounded-full text-center text-gray-900 font-bold leading-8 transition-all duration-1000 ease-out" style="width: 0%;">
+        <section id="goal" class="py-12 reveal">
+            <div class="max-w-5xl mx-auto bg-gray-800 rounded-lg p-8 shadow-lg">
+                <h2 class="text-5xl font-bold text-center mb-4">Nossa Meta</h2>
+                <p class="text-center text-gray-300 mb-8">Estamos empenhados em levantar R$ 10.000,00 para arcar com as despesas da nossa jornada!</p>
+                <div class="w-full bg-gray-700 rounded-full h-10">
+                    <div id="progress-bar" class="bg-gradient-to-r from-green-400 to-blue-500 h-10 rounded-full text-center text-gray-900 font-bold leading-10 transition-all duration-1000 ease-out" style="width: 0%;">
                         <span id="progress-percentage">50%</span>
                     </div>
                 </div>
@@ -166,50 +181,35 @@
         </section>
 
         <!-- Seção Destino dos Recursos -->
-        <section id="fundraising-goal" class="py-20 reveal">
-            <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-4">Para Onde Vai a Sua Contribuição?</h2>
-                <p class="text-gray-300 leading-relaxed mb-12">
+        <section id="fundraising-goal" class="py-16 reveal">
+            <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-8">Para Onde Vai a Sua Contribuição?</h2>
+            <p class="text-gray-300 max-w-3xl mx-auto text-center text-lg leading-relaxed mb-12">
                     Todo o valor arrecadado será investido diretamente para viabilizar nossa participação no evento, cobrindo os custos essenciais da viagem. A transparência é nosso compromisso com cada apoiador.
                 </p>
-            </div>
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <!-- Item 1: Passagens -->
-                <div class="bg-gray-800 rounded-lg p-8">
-                    <div class="flex items-center justify-center mb-4 bg-green-500/20 rounded-full w-20 h-20 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Passagens Aéreas</h3>
-                    <p class="text-gray-400">Custeio das passagens de ida e volta de Boa Vista (BVB) para Belém (BEL) para toda a delegação.</p>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-2xl text-center">
+                    <i class="fas fa-plane text-5xl text-blue-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Passagens Aéreas</h3>
+                    <p class="text-gray-300">Transporte aéreo de Boa Vista para Belém para toda a equipe</p>
                 </div>
-                <!-- Item 2: Hospedagem -->
-                <div class="bg-gray-800 rounded-lg p-8">
-                    <div class="flex items-center justify-center mb-4 bg-green-500/20 rounded-full w-20 h-20 mx-auto">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Hospedagem e Estadia</h3>
-                    <p class="text-gray-400">Garantir a acomodação segura e próxima ao local do evento durante os dias da COP30.</p>
+                <div class="bg-gray-800 p-8 rounded-2xl text-center">
+                    <i class="fas fa-bed text-5xl text-green-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Hospedagem</h3>
+                    <p class="text-gray-300">Acomodação durante os dias do evento em Belém</p>
                 </div>
-                <!-- Item 3: Alimentação -->
-                <div class="bg-gray-800 rounded-lg p-8">
-                    <div class="flex items-center justify-center mb-4 bg-green-500/20 rounded-full w-20 h-20 mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Alimentação e Transporte</h3>
-                    <p class="text-gray-400">Cobertura dos custos com alimentação e transporte local para que possamos focar nos projetos.</p>
+                <div class="bg-gray-800 p-8 rounded-2xl text-center">
+                    <i class="fas fa-utensils text-5xl text-yellow-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Alimentação</h3>
+                    <p class="text-gray-300">Refeições durante toda a estadia na capital paraense</p>
                 </div>
             </div>
+        </div>
         </section>
 
         <!-- Seção Projetos -->
-        <section id="projects" class="py-20 reveal">
-            <h2 class="text-3xl font-bold text-center mb-12">Projetos que Transformam</h2>
+        <section id="projects" class="py-16 reveal">
+            <h2 class="text-5xl font-bold text-center mb-12">Nossos Projetos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Card de Projeto 1 - InvestVerde -->
@@ -224,7 +224,7 @@
                     data-color-class="text-teal-400">
                     <img src="https://i.postimg.cc/26vHzKDF/invest-Verde-B.png" alt="Imagem do Projeto 1" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl mb-2 text-teal-400">InvestVerde</h3>
+                        <h3 class="font-bold text-2xl mb-2 text-teal-400">InvestVerde</h3>
                         <p class="text-gray-300 flex-grow">Plataforma para impulsionar projetos verdes e investimento de impacto.</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
                             <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Institucional</span></p>
@@ -248,7 +248,7 @@
                     data-color-class="text-green-500">
                     <img src="https://i.postimg.cc/dDcCvJFw/bio-Start-B.png" alt="Imagem do Projeto 2" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl mb-2 text-green-500">BioStart</h3>
+                        <h3 class="font-bold text-2xl mb-2 text-green-500">BioStart</h3>
                         <p class="text-gray-300 flex-grow">Guia Interativo para Produção de Biogás com Resíduos Orgânicos.</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
                             <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Ambiental</span></p>
@@ -274,7 +274,7 @@
                     data-color-class="text-green-400">
                     <img src="https://i.postimg.cc/0jzbg2yX/feira-Na-Palma-B.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl mb-2 text-green-400">Feira na Palma</h3>
+                        <h3 class="font-bold text-2xl mb-2 text-green-400">Feira na Palma</h3>
                         <p class="text-gray-300 flex-grow">Plataforma Digital para comercialização de produtos e Fortalecimento do Pequeno Produtor de Hortaliças</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
                             <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Social</span></p>
@@ -298,7 +298,7 @@
                     data-color-class="text-blue-400">
                     <img src="https://i.postimg.cc/T3CQ0CBd/eco-Energia-B.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl mb-2 text-blue-400">EcoEnergia</h3>
+                        <h3 class="font-bold text-2xl mb-2 text-blue-400">EcoEnergia</h3>
                         <p class="text-gray-300 flex-grow">Aplicação para Monitoramento, Controle e Conscientização sobre o Consumo de Energia Elétrica Residencial</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
                             <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Ambiental</span></p>
@@ -321,7 +321,7 @@
                     data-color-class="text-lime-400">
                     <img src="https://i.postimg.cc/bJt1bTQw/ecoWebB.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl mb-2 text-lime-400">EcoWeb</h3>
+                        <h3 class="font-bold text-2xl mb-2 text-lime-400">EcoWeb</h3>
                         <p class="text-gray-300 flex-grow">Plataforma Digital para Reutilização Criativa e Conexão de Resíduos Sustentáveis</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
                             <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Econômica</span></p>
@@ -345,7 +345,7 @@
                     data-color-class="text-green-500">
                     <img src="https://i.postimg.cc/9fYjyVgn/surB.png" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl mb-2 text-green-500">SUR – Sistema Único Rural</h3>
+                        <h3 class="font-bold text-2xl mb-2 text-green-500">SUR – Sistema Único Rural</h3>
                         <p class="text-gray-300 flex-grow">Plataforma Integrada para a Sustentabilidade no Meio Rural Amazônico.</p>
                         <div class="mt-4 pt-4 border-t border-gray-700">
                             <p class="text-sm text-gray-400 mb-2">Dimensão: <span class="font-semibold text-gray-300">Econômica</span></p>
@@ -361,54 +361,59 @@
         </section>
 
         <!-- Seção de Patrocínio -->
-        <section id="sponsorship" class="py-20 reveal">
-            <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-4">Seja um Patrocinador</h2>
-                <p class="text-gray-300 leading-relaxed mb-12">
+        <section id="sponsorship" class="py-16 reveal">
+            <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6">Seja Nosso Parceiro</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
                     Ao investir em nossa jornada, você e sua marca ganham visibilidade, engajamento e reconhecimento social, fortalecendo a educação, a tecnologia e a sustentabilidade na região Norte.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                 <!-- Nível Semente -->
-                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 flex flex-col">
-                    <h3 class="text-2xl font-bold text-green-400 mb-2">🌱 Nível Semente</h3>
-                    <p class="font-semibold text-lg text-white mb-4">até R$ 250,00</p>
-                    <ul class="text-gray-400 space-y-2 list-disc list-inside flex-grow">
+                <div class="bg-gray-800 p-8 rounded-lg text-center transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">Semente</h3>
+                    <div class="text-3xl font-bold mb-6">Até R$ 250,00</div>
+                    <ul class="text-left space-y-2 text-gray-300 list-disc list-inside flex-grow">
                         <li>Sua marca exibida em postagens, banners e artes relacionadas às rifas.</li>
                     </ul>
                 </div>
                 <!-- Nível Broto -->
-                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 flex flex-col">
-                    <h3 class="text-2xl font-bold text-green-400 mb-2">🌿 Nível Broto</h3>
-                    <p class="font-semibold text-lg text-white mb-4">até R$ 500,00</p>
-                    <ul class="text-gray-400 space-y-2 list-disc list-inside flex-grow">
+                <div class="bg-gray-800 p-8 rounded-lg text-center transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Broto</h3>
+                    <div class="text-3xl font-bold mb-6">Até R$ 500,00</div>
+                    <ul class="text-left space-y-2 text-gray-300 list-disc list-inside flex-grow">
                         <li>Todos os benefícios anteriores.</li>
                         <li>Inclusão da sua marca em banners, cartazes, camisetas e demais publicações de todos os projetos.</li>
                     </ul>
                 </div>
                 <!-- Nível Árvore Jovem -->
-                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 flex flex-col">
-                    <h3 class="text-2xl font-bold text-green-400 mb-2">🌳 Nível Árvore Jovem</h3>
-                    <p class="font-semibold text-lg text-white mb-4">até R$ 1.000,00</p>
-                    <ul class="text-gray-400 space-y-2 list-disc list-inside flex-grow">
+                <div class="bg-gray-800 p-8 rounded-lg text-center transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-4">🌳</div>
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Árvore Jovem</h3>
+                    <div class="text-3xl font-bold mb-6">Até R$ 1.000,00</div>
+                    <ul class="text-left space-y-2 text-gray-300 list-disc list-inside flex-grow">
                         <li>Todos os benefícios anteriores.</li>
                         <li>Engajamento digital ampliado: sua marca será marcada em colabs e destacada em nossas ações nas redes sociais.</li>
                     </ul>
                 </div>
                 <!-- Nível Floresta -->
-                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 flex flex-col">
-                    <h3 class="text-2xl font-bold text-green-400 mb-2">🌲 Nível Floresta</h3>
-                    <p class="font-semibold text-lg text-white mb-4">acima de R$ 1.000,00</p>
-                    <ul class="text-gray-400 space-y-2 list-disc list-inside flex-grow">
+                <div class="bg-gray-800 p-8 rounded-lg text-center transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-4">🌲</div>
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">Floresta</h3>
+                    <div class="text-3xl font-bold mb-6">Acima de R$ 1.000+</div>
+                    <ul class="text-left space-y-2 text-gray-300 list-disc list-inside flex-grow">
                         <li>Todos os benefícios anteriores.</li>
                         <li>Contrapartida exclusiva: oferecemos oficinas, palestras, cursos e capacitações personalizadas.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="max-w-4xl mx-auto mt-12 bg-gray-800 rounded-lg p-8">
-                <h3 class="text-2xl font-bold mb-4 text-center">🎯 Alcance e Visibilidade</h3>
+            <div class="max-w-4xl mx-auto mt-12 bg-gray-800 rounded-lg p-8 reveal mb-12">
+                <h3 class="text-3xl font-bold mb-6 text-center">🎯 Alcance e Visibilidade</h3>
                 <ul class="text-gray-300 space-y-3 list-disc list-inside">
                     <li>Somente com as rifas, esperamos impactar mais de 3.000 pessoas diretamente.</li>
                     <li>Nossas redes sociais apresentam métricas de alcance e engajamento constantes.</li>
@@ -417,25 +422,19 @@
             </div>
             
             <!-- Seção de Contato WhatsApp -->
-            <div class="text-center mt-16">
-                <h3 class="text-2xl font-bold mb-4">Tem interesse em colaborar?</h3>
-                <p class="text-gray-300 max-w-2xl mx-auto mb-8">
-                    Envie seu comprovante de doação ou entre em contato para discutir parcerias. Estamos abertos a novas ideias e colaborações!
-                </p>
-                <a href="https://wa.me/5595984043276?text=Ol%C3%A1!%20Tenho%20interesse%20em%20apoiar%20o%20projeto%20Rumo%20%C3%A0%20COP30." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.956-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.166l-1.138 4.162 4.273-1.12z" />
-                    </svg>
-                    Entre em Contato via WhatsApp
+            <div class="text-center">
+                <a href="https://wa.me/5595984043276?text=Ol%C3%A1!%20Tenho%20interesse%20em%20apoiar%20o%20projeto%20Rumo%20%C3%A0%20COP30." target="_blank" class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-xl font-semibold inline-flex items-center gap-3 transition-all transform hover:scale-105">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale Conosco
                 </a>
             </div>
         </section>
 
         <!-- Seção Apoiadores -->
-        <section id="supporters" class="py-20 reveal">
+        <section id="supporters" class="py-32 reveal">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-4">Nossos Apoiadores</h2>
-                <p class="text-gray-300 leading-relaxed mb-12">
+                <h2 class="text-5xl font-bold mb-4">Nossos Apoiadores</h2>
+                <p class="text-gray-300 leading-relaxed mb-12 text-xl">
                     Agradecemos a todos que acreditam e investem neste sonho. Graças a vocês, estamos mais perto de Belém!
                 </p>
             </div>
@@ -449,10 +448,10 @@
         </section>
 
         <!-- Seção Instagram -->
-        <section id="instagram" class="py-20 bg-gray-800 reveal">
+        <section id="instagram" class="py-16 bg-gray-800 reveal">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-4">Acompanhe nossa Jornada</h2>
-                <p class="text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">
+                <h2 class="text-5xl font-bold mb-4">Acompanhe nossa Jornada</h2>
+                <p class="text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto text-xl">
                     Siga nosso perfil no Instagram para ver o dia a dia dos projetos, bastidores da nossa preparação e todas as novidades da campanha em tempo real!
                 </p>
                 <a href="https://www.instagram.com/levaagntpracop.rr" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 shadow-lg mb-12">
@@ -482,19 +481,19 @@
         </section>
 
         <!-- Seção FAQ -->
-        <section id="faq" class="py-20 reveal">
+        <section id="faq" class="py-16 reveal">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-12">Perguntas Frequentes</h2>
+                <h2 class="text-5xl font-bold mb-12">Perguntas Frequentes</h2>
             </div>
             <div class="max-w-4xl mx-auto space-y-4">
                 <!-- Item FAQ 1 -->
                 <div class="faq-item bg-gray-800 rounded-lg overflow-hidden">
                     <button class="faq-question flex justify-between items-center w-full text-left p-6 focus:outline-none">
-                        <span class="font-semibold text-lg text-white">Como sei que minha doação será bem utilizada?</span>
+                        <span class="font-semibold text-xl text-white">Como sei que minha doação será bem utilizada?</span>
                         <span class="faq-icon text-2xl text-gray-300 transform transition-transform duration-300">-</span>
                     </button>
                     <div class="faq-answer max-h-screen overflow-hidden transition-all duration-500 ease-in-out">
-                        <p class="p-6 pt-0 text-gray-300 text-justify">
+                        <p class="p-6 pt-0 text-gray-300 text-justify text-lg">
                             A transparência é nosso maior compromisso! Todo o valor arrecadado será destinado exclusivamente para os custos essenciais da viagem: passagens aéreas, hospedagem e alimentação da delegação. Manteremos registros detalhados e, ao final da campanha, publicaremos uma prestação de contas em nossas redes sociais.
                         </p>
                     </div>
@@ -502,11 +501,11 @@
                 <!-- Item FAQ 2 -->
                 <div class="faq-item bg-gray-800 rounded-lg overflow-hidden">
                     <button class="faq-question flex justify-between items-center w-full text-left p-6 focus:outline-none">
-                        <span class="font-semibold text-lg text-white">Posso ajudar de outras formas além de doar dinheiro?</span>
+                        <span class="font-semibold text-xl text-white">Posso ajudar de outras formas além de doar dinheiro?</span>
                         <span class="faq-icon text-2xl text-gray-300 transform transition-transform duration-300 rotate-180">+</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                        <p class="p-6 pt-0 text-gray-300 text-justify">
+                        <p class="p-6 pt-0 text-gray-300 text-justify text-lg">
                             Com certeza! A maior ajuda, além da financeira, é a divulgação. Compartilhe o link do nosso site em suas redes sociais, em grupos de WhatsApp com amigos e familiares. Quanto mais pessoas conhecerem nossa causa, mais perto estaremos de alcançar nossa meta. Seguir e interagir em nosso  <a href="https://www.instagram.com/levaagntpracop.rr" target="_blank" class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 font-bold">Instagram (@levaagntpracop.rr)</a> também ajuda muito!
                         </p>
                     </div>
@@ -514,11 +513,11 @@
                 <!-- Item FAQ 3 -->
                 <div class="faq-item bg-gray-800 rounded-lg overflow-hidden">
                     <button class="faq-question flex justify-between items-center w-full text-left p-6 focus:outline-none">
-                        <span class="font-semibold text-lg text-white">Quem são os responsáveis pela campanha?</span>
+                        <span class="font-semibold text-xl text-white">Quem são os responsáveis pela campanha?</span>
                         <span class="faq-icon text-2xl text-gray-300 transform transition-transform duration-300 rotate-180">+</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                        <p class="p-6 pt-0 text-gray-300 text-justify">
+                        <p class="p-6 pt-0 text-gray-300 text-justify text-lg">
                             A campanha é uma iniciativa oficial dos estudantes e professores orientadores dos cursos de Análise e Desenvolvimento de Sistemas (TADS) e Ciências Biológicas do IFRR - Campus Boa Vista. A gestão financeira é feita de forma colaborativa pela equipe, com supervisão dos orientadores para garantir a correta aplicação dos recursos.
                         </p>
                     </div>
@@ -528,10 +527,15 @@
 
     <!-- Rodapé -->
     <footer class="bg-gray-900 border-t border-gray-700">
-        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-400">
             <p>&copy; 2025 | Delegação IFRR Rumo à COP30</p>
             <p class="text-sm mt-2">Desenvolvido com orgulho pelos alunos de TADS.</p>
         </div>
+        <div class="flex justify-center space-x-6">
+                <a href="https://instagram.com/levaagntpracop.rr" target="_blank" class="text-pink-400 hover:text-pink-300 text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
     </footer>
 
     <script>
