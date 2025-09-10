@@ -54,6 +54,13 @@
         #project-modal-content::-webkit-scrollbar-thumb:hover {
             background-color: #6b7280; /* Cor mais clara no hover (bg-gray-500) */
         }
+        @keyframes scroll-vertical {
+            from { transform: translateY(0); }
+            to { transform: translateY(-50%); }
+        }
+        .animate-scroll-vertical {
+            animation: scroll-vertical 30s linear infinite;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -82,7 +89,7 @@
         </div>
     </nav>
 
-    <!-- Modal de Notificação -->
+    <!-- Modal de Notificação 
     <div id="notification-modal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden opacity-0">
         <div class="modal-content bg-gray-800 rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 opacity-0" id="notification-modal-content">
             <div class="flex flex-col items-center">
@@ -103,7 +110,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <!-- Modal de Doação -->
     <div id="donation-modal" class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden opacity-0">
@@ -211,13 +218,14 @@
                         </div>
                     </div>
                 </div>
-            <div id="photo-slider" class="max-w-3xl mx-auto mt-8 relative">
-                <div id="slider-progress" class="absolute top-4 left-0 right-4 z-20 flex gap-1 pointer-events-none"></div>
-                <div id="slider-slides" class="relative overflow-hidden rounded-lg bg-black" style="min-height:360px;">
+                <div id="photo-slider" class="max-w-3xl mx-auto mt-8 relative">
+                    <div id="slider-progress" class="absolute top-4 left-0 right-4 z-20 flex gap-1 pointer-events-none"></div>
+                    <div id="slider-slides" class="relative overflow-hidden rounded-lg bg-black" style="min-height:360px;">
+                    </div>
+                    <button id="slider-next" aria-label="Next" class="absolute inset-0 w-full h-full bg-transparent"></button>
                 </div>
-                <button id="slider-next" aria-label="Next" class="absolute inset-0 w-full h-full bg-transparent"></button>
             </div>
-        </section></div>
+        </section>
 
         <!-- Seção Meta de Arrecadação -->
         <section id="goal" class="py-12 reveal">
@@ -244,17 +252,17 @@
                     Todo o valor arrecadado será investido diretamente para viabilizar nossa participação no evento, cobrindo os custos essenciais da viagem. A transparência é nosso compromisso com cada apoiador.
                 </p>
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-gray-800 p-8 rounded-2xl text-center">
+                <div class="bg-gray-800 p-8 rounded-lg text-center">
                     <i class="fas fa-plane text-5xl text-blue-400 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Passagens Aéreas</h3>
                     <p class="text-gray-300">Transporte aéreo de Boa Vista para Belém para toda a equipe</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-2xl text-center">
+                <div class="bg-gray-800 p-8 rounded-lg text-center">
                     <i class="fas fa-bed text-5xl text-green-400 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Hospedagem</h3>
                     <p class="text-gray-300">Acomodação durante os dias do evento em Belém</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-2xl text-center">
+                <div class="bg-gray-800 p-8 rounded-lg text-center">
                     <i class="fas fa-utensils text-5xl text-yellow-400 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Alimentação</h3>
                     <p class="text-gray-300">Refeições durante toda a estadia na capital paraense</p>
@@ -478,7 +486,7 @@
             </div>
             
             <!-- Seção de Contato WhatsApp -->
-            <div class="text-center">
+            <div class="text-center reveal">
                 <a href="https://wa.me/5595984043276?text=Ol%C3%A1!%20Tenho%20interesse%20em%20apoiar%20o%20projeto%20Rumo%20%C3%A0%20COP30." target="_blank" class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-xl font-semibold inline-flex items-center gap-3 transition-all transform hover:scale-105">
                     <i class="fab fa-whatsapp"></i>
                     Fale Conosco
@@ -506,6 +514,71 @@
                     <img src="https://i.postimg.cc/6qZSRH0L/logo-Marcos.png" alt="Apoio Dep. Marcos Jorge" class="mx-auto rounded-lg">
                 </a>
             </div>
+
+        <!-- Seção Contribuição Interna -->
+        <section id="internal-contributors" class="py-20 reveal">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4">Apoio da Comunidade IFRR</h2>
+                <p class="text-gray-300 leading-relaxed mb-12">
+                    Uma campanha interna especial para arrecadar fundos para custos específicos da nossa viagem. Agradecemos imensamente o apoio de servidores e professores!
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Meta 1: Passagem -->
+                    <div class="bg-gray-800 rounded-lg p-8">
+                        <div class="text-center mb-6">
+                            <h4 class="text-2xl font-bold text-green-400">✅ Meta 1</h4>
+                            <h3 class="text-lg text-gray-300 mb-2">Cota para uma <span class="font-bold text-gray-200">passagem</span></h3>
+                            <div class="text-lg text-gray-300 mb-4">
+                                <span class="text-green-400 font-bold">100% atingido</span> - R$ 1.000,00 / R$ 1.000,00
+                            </div>
+                            <div class="w-full bg-gray-600 rounded-full h-3 mb-6">
+                                <div class="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-grow h-64 overflow-hidden relative">
+                        <ul class="contributor-list absolute top-0 left-0 w-full animate-scroll-vertical">
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">George</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Vinícius</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Danilo</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Solange</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Emílio</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Ricardo</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Luiz Faustino</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Márcia Brazão</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Aline Ferreira
+</span>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Meta 2: Hospedagem e Alimentação -->
+                <div class="bg-gray-800 rounded-lg p-8">
+                        <div class="text-center mb-6">
+                            <h4 class="text-2xl font-bold text-orange-400">🎯 Meta 2</h4>
+                            <h3 class="text-lg text-gray-300 mb-2">Cota para <span class="font-bold text-gray-200">hospedagem e alimentação</span></h3>
+                            <div class="text-lg text-gray-300 mb-4">
+                                <span class="text-orange-400 font-bold">60% atingido</span> - R$ 600,00 / R$ 1.000,00
+                            </div>
+                            <div class="w-full bg-gray-600 rounded-full h-3 mb-6">
+                                <div class="bg-gradient-to-r from-orange-400 to-green-500 h-3 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-grow h-64 overflow-hidden relative">
+                        <ul class="contributor-list absolute top-0 left-0 w-full animate-scroll-vertical">
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Heila</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Daygles</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Roseli </span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Heila</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Daygles</span>
+                            <li class="bg-gray-900/50 p-3 rounded-md mb-2 flex justify-between items-center"><span class="text-gray-200">Roseli </span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         </section>
 
         <!-- Seção Instagram -->
@@ -519,21 +592,21 @@
                     Seguir @levaagntpracop.rr
                 </a>
 
-                <!-- Galeria de Posts (Manual) -->
+                <!-- Galeria de Destaques (Manual) -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                    <!-- Post 1 -->
+                    <!-- Destaque 1 -->
                     <a href="https://www.instagram.com/stories/highlights/17844645852553573/" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
                         <img src="https://placehold.co/400x400/1a202c/ffffff?text=Como+ajudar?" alt="Como Ajudar?" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
-                    <!-- Post 2 -->
+                    <!-- Destaque 2 -->
                     <a href="https://www.instagram.com/stories/highlights/18316709935211556/" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
                         <img src="https://placehold.co/400x400/1a202c/ffffff?text=Parceiros" alt="Parceiros" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
-                    <!-- Post 3 -->
+                    <!-- Destaque 3 -->
                     <a href="https://www.instagram.com/stories/highlights/18070563365145600/" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
                         <img src="https://placehold.co/400x400/1a202c/ffffff?text=Quem+somos?" alt="Quem somos?" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
-                    <!-- Post 4 -->
+                    <!-- Destaque 4 -->
                     <a href="https://www.instagram.com/levaagntpracop.rr" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden group">
                         <img src="https://placehold.co/400x400/1a202c/ffffff?text=Ver+perfil" alt="Ver perfil" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                     </a>
@@ -601,187 +674,187 @@
 
     <script async src="//www.instagram.com/embed.js"></script>
     <script>
-                    (function () {
-                // Configure images (horizontal and vertical examples)
-                const images = [
-                    'https://i.postimg.cc/PJrmRDxm/premio-Bio-Start.jpg',
-                    'https://i.postimg.cc/vmrf8hxr/premio-Bio-Start2.jpg',
-                    'https://i.postimg.cc/mkwFR50J/premio-Bio-Start3.jpg',
-                    'https://i.postimg.cc/LXzr9cmH/premio-Bio-Start5.jpg',
-                    'https://i.postimg.cc/fyL9Kh2C/premio-Bio-Start4.jpg'
-                ];
+        (function () {
+        // Configure images (horizontal and vertical examples)
+            const images = [
+                'https://i.postimg.cc/PJrmRDxm/premio-Bio-Start.jpg',
+                'https://i.postimg.cc/vmrf8hxr/premio-Bio-Start2.jpg',
+                'https://i.postimg.cc/mkwFR50J/premio-Bio-Start3.jpg',
+                'https://i.postimg.cc/LXzr9cmH/premio-Bio-Start5.jpg',
+                'https://i.postimg.cc/fyL9Kh2C/premio-Bio-Start4.jpg'
+            ];
 
-                const DURATION = 4200; // ms per slide
+            const DURATION = 4200; // ms per slide
 
-                const slider = document.getElementById('photo-slider');
-                const slidesEl = document.getElementById('slider-slides');
-                const progressEl = document.getElementById('slider-progress');
-                const nextBtn = document.getElementById('slider-next');
+            const slider = document.getElementById('photo-slider');
+            const slidesEl = document.getElementById('slider-slides');
+            const progressEl = document.getElementById('slider-progress');
+            const nextBtn = document.getElementById('slider-next');
 
-                let current = 0;
-                let timeoutId = null;
-                let isPaused = false;
-                let remainingTime = DURATION;
-                let startTimestamp = null;
+            let current = 0;
+            let timeoutId = null;
+            let isPaused = false;
+            let remainingTime = DURATION;
+            let startTimestamp = null;
 
-                // build DOM
-                images.forEach((src, i) => {
-                    // slide
-                    const slide = document.createElement('div');
-                    slide.className = 'slide absolute inset-0 transition-opacity duration-500 opacity-0 flex items-center justify-center bg-black';
-                    slide.dataset.index = i;
+            // build DOM
+            images.forEach((src, i) => {
+                // slide
+                const slide = document.createElement('div');
+                slide.className = 'slide absolute inset-0 transition-opacity duration-500 opacity-0 flex items-center justify-center bg-black';
+                slide.dataset.index = i;
 
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.alt = `Foto ${i + 1}`;
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = `Foto ${i + 1}`;
 
-                    // Allow both orientations: use object-contain and max heights
-                    img.className = 'max-w-full max-h-[70vh] object-contain';
-                    img.onerror = () => { img.src = 'https://placehold.co/800x600/111827/ffffff?text=Imagem+indisponível'; };
+                // Allow both orientations: use object-contain and max heights
+                img.className = 'max-w-full max-h-[70vh] object-contain';
+                img.onerror = () => { img.src = 'https://placehold.co/800x600/111827/ffffff?text=Imagem+indisponível'; };
 
-                    slide.appendChild(img);
-                    slidesEl.appendChild(slide);
+                slide.appendChild(img);
+                slidesEl.appendChild(slide);
 
-                    // progress bar
-                    const barWrap = document.createElement('div');
-                    barWrap.className = 'flex-1 bg-gray-700 h-1 rounded overflow-hidden';
-                    barWrap.style.minWidth = (100 / images.length) + '%'; // keep balanced on small screens
+                // progress bar
+                const barWrap = document.createElement('div');
+                barWrap.className = 'flex-1 bg-gray-700 h-1 rounded overflow-hidden';
+                barWrap.style.minWidth = (100 / images.length) + '%'; // keep balanced on small screens
 
-                    const barInner = document.createElement('div');
-                    barInner.className = 'bar-inner h-1 bg-white w-0';
-                    barInner.style.transition = `width ${DURATION}ms linear`;
-                    barInner.dataset.index = i;
+                const barInner = document.createElement('div');
+                barInner.className = 'bar-inner h-1 bg-white w-0';
+                barInner.style.transition = `width ${DURATION}ms linear`;
+                barInner.dataset.index = i;
 
-                    barWrap.appendChild(barInner);
-                    progressEl.appendChild(barWrap);
-                });
+                barWrap.appendChild(barInner);
+                progressEl.appendChild(barWrap);
+            });
 
-                const slideEls = Array.from(slidesEl.querySelectorAll('.slide'));
-                const barInners = Array.from(progressEl.querySelectorAll('.bar-inner'));
+            const slideEls = Array.from(slidesEl.querySelectorAll('.slide'));
+            const barInners = Array.from(progressEl.querySelectorAll('.bar-inner'));
 
-                function showSlide(index) {
-                    // clamp
-                    index = ((index % images.length) + images.length) % images.length;
+            function showSlide(index) {
+                // clamp
+                index = ((index % images.length) + images.length) % images.length;
 
-                    // hide all slides
-                    slideEls.forEach(s => s.classList.add('opacity-0'));
-                    // show current
-                    const active = slideEls[index];
-                    if (active) active.classList.remove('opacity-0');
+                // hide all slides
+                slideEls.forEach(s => s.classList.add('opacity-0'));
+                // show current
+                const active = slideEls[index];
+                if (active) active.classList.remove('opacity-0');
 
-                    // reset progress visuals for preceding/next
-                    barInners.forEach((bar, i) => {
-                        bar.style.transition = 'none';
-                        bar.style.width = i < index ? '100%' : '0%';
-                        // force reflow to apply immediate values
-                        void bar.offsetWidth;
-                        // restore transition
-                        bar.style.transition = `width ${DURATION}ms linear`;
-                    });
-
-                    // start animation for active bar
-                    const currentBar = barInners[index];
-                    // ensure starting from 0
-                    currentBar.style.width = '0%';
-                    // reflow then animate to 100%
-                    void currentBar.offsetWidth;
-                    // start
-                    startTimestamp = performance.now();
-                    currentBar.style.transition = `width ${DURATION}ms linear`;
-                    currentBar.style.width = '100%';
-
-                    // schedule next
-                    clearTimeout(timeoutId);
-                    timeoutId = setTimeout(() => nextSlide(), DURATION);
-                    remainingTime = DURATION;
-                    current = index;
-                }
-
-                function nextSlide() {
-                    showSlide(current + 1);
-                }
-
-                function pauseSlider() {
-                    if (isPaused) return;
-                    isPaused = true;
-                    clearTimeout(timeoutId);
-
-                    // freeze current bar width and compute elapsed
-                    const bar = barInners[current];
-                    const parent = bar.parentElement;
-                    const computed = window.getComputedStyle(bar).width;
-                    const parentWidth = parent.clientWidth;
-                    const currentPx = parseFloat(computed);
-                    const percent = parentWidth ? (currentPx / parentWidth) : 0;
-
-                    // remove transition and set width as computed to freeze
+                // reset progress visuals for preceding/next
+                barInners.forEach((bar, i) => {
                     bar.style.transition = 'none';
-                    bar.style.width = (percent * 100) + '%';
+                    bar.style.width = i < index ? '100%' : '0%';
+                    // force reflow to apply immediate values
+                    void bar.offsetWidth;
+                    // restore transition
+                    bar.style.transition = `width ${DURATION}ms linear`;
+                });
 
-                    // calculate remaining
-                    const elapsed = performance.now() - startTimestamp;
-                    remainingTime = Math.max(0, DURATION - elapsed);
+                // start animation for active bar
+                const currentBar = barInners[index];
+                // ensure starting from 0
+                currentBar.style.width = '0%';
+                // reflow then animate to 100%
+                void currentBar.offsetWidth;
+                // start
+                startTimestamp = performance.now();
+                currentBar.style.transition = `width ${DURATION}ms linear`;
+                currentBar.style.width = '100%';
+
+                // schedule next
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => nextSlide(), DURATION);
+                remainingTime = DURATION;
+                current = index;
+            }
+
+        function nextSlide() {
+            showSlide(current + 1);
+        }
+
+        function pauseSlider() {
+            if (isPaused) return;
+            isPaused = true;
+            clearTimeout(timeoutId);
+
+            // freeze current bar width and compute elapsed
+            const bar = barInners[current];
+            const parent = bar.parentElement;
+            const computed = window.getComputedStyle(bar).width;
+            const parentWidth = parent.clientWidth;
+            const currentPx = parseFloat(computed);
+            const percent = parentWidth ? (currentPx / parentWidth) : 0;
+
+            // remove transition and set width as computed to freeze
+            bar.style.transition = 'none';
+            bar.style.width = (percent * 100) + '%';
+
+            // calculate remaining
+            const elapsed = performance.now() - startTimestamp;
+            remainingTime = Math.max(0, DURATION - elapsed);
+        }
+
+        function resumeSlider() {
+            if (!isPaused) return;
+            isPaused = false;
+            const bar = barInners[current];
+            // compute current percent from width
+            const parent = bar.parentElement;
+            const computed = window.getComputedStyle(bar).width;
+            const parentWidth = parent.clientWidth;
+            const currentPx = parseFloat(computed);
+            const percent = parentWidth ? (currentPx / parentWidth) : 0;
+
+            // animate remaining portion
+            bar.style.transition = `width ${remainingTime}ms linear`;
+            // trigger after a small timeout to ensure transition is set
+                setTimeout(() => {
+                    bar.style.width = '100%';
+                    startTimestamp = performance.now();
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(() => nextSlide(), remainingTime);
+                }, 20);
+            }
+
+            // pause on hover / focus
+            slider.addEventListener('mouseenter', pauseSlider);
+            slider.addEventListener('mouseleave', resumeSlider);
+            slider.addEventListener('touchstart', pauseSlider, { passive: true });
+            slider.addEventListener('touchend', resumeSlider);
+
+            // click to advance or go back depending on which half is clicked
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                pauseSlider();
+
+            // determine click position relative to the slider element
+                const rect = slider.getBoundingClientRect();
+                const clickX = (e.clientX !== undefined) ? (e.clientX - rect.left) : (e.touches && e.touches[0] ? e.touches[0].clientX - rect.left : 0);
+
+                // if clicked on left half -> previous, otherwise -> next
+                if (clickX < rect.width / 2) {
+                    showSlide(current - 1);
+                } else {
+                    nextSlide();
                 }
+            });
 
-                function resumeSlider() {
-                    if (!isPaused) return;
-                    isPaused = false;
-                    const bar = barInners[current];
-                    // compute current percent from width
-                    const parent = bar.parentElement;
-                    const computed = window.getComputedStyle(bar).width;
-                    const parentWidth = parent.clientWidth;
-                    const currentPx = parseFloat(computed);
-                    const percent = parentWidth ? (currentPx / parentWidth) : 0;
+            // keyboard left/right
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') { pauseSlider(); nextSlide(); }
+                if (e.key === 'ArrowLeft') { pauseSlider(); showSlide(current - 1); }
+            });
 
-                    // animate remaining portion
-                    bar.style.transition = `width ${remainingTime}ms linear`;
-                    // trigger after a small timeout to ensure transition is set
-                    setTimeout(() => {
-                        bar.style.width = '100%';
-                        startTimestamp = performance.now();
-                        clearTimeout(timeoutId);
-                        timeoutId = setTimeout(() => nextSlide(), remainingTime);
-                    }, 20);
-                }
+            // init
+            showSlide(0);
 
-                // pause on hover / focus
-                slider.addEventListener('mouseenter', pauseSlider);
-                slider.addEventListener('mouseleave', resumeSlider);
-                slider.addEventListener('touchstart', pauseSlider, { passive: true });
-                slider.addEventListener('touchend', resumeSlider);
-
-                // click to advance or go back depending on which half is clicked
-                nextBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    pauseSlider();
-
-                    // determine click position relative to the slider element
-                    const rect = slider.getBoundingClientRect();
-                    const clickX = (e.clientX !== undefined) ? (e.clientX - rect.left) : (e.touches && e.touches[0] ? e.touches[0].clientX - rect.left : 0);
-
-                    // if clicked on left half -> previous, otherwise -> next
-                    if (clickX < rect.width / 2) {
-                        showSlide(current - 1);
-                    } else {
-                        nextSlide();
-                    }
-                });
-
-                // keyboard left/right
-                window.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowRight') { pauseSlider(); nextSlide(); }
-                    if (e.key === 'ArrowLeft') { pauseSlider(); showSlide(current - 1); }
-                });
-
-                // init
-                showSlide(0);
-
-                // make slider responsive on resize (keeps progress consistent)
-                window.addEventListener('resize', () => {
-                    // recalc nothing special; bars use percentages so they scale automatically
-                });
-            })();
+            // make slider responsive on resize (keeps progress consistent)
+            window.addEventListener('resize', () => {
+                // recalc nothing special; bars use percentages so they scale automatically
+            });
+        })();
         // --- Dicionários de ODS ---
         const odsMap = {
             '1': 'Erradicação da Pobreza', '2': 'Fome Zero', '3': 'Saúde e Bem-Estar',
@@ -808,7 +881,7 @@
         const projectModal = document.getElementById('project-modal');
         const projectModalContent = document.getElementById('project-modal-content');
 
-        // --- Funções do Modal de Notificação ---
+        /* --- Funções do Modal de Notificação ---
         function openNotificationModal() {
             notificationModal.classList.remove('hidden');
             setTimeout(() => {
@@ -826,6 +899,7 @@
                 notificationModal.classList.add('hidden');
             }, 300);
         }
+        */
 
         // --- Funções do Modal de Doação ---
         function openDonationModal() {
@@ -976,7 +1050,7 @@
             updateProgressBar();
             applyOdsColorsToCards();
 
-            // --- Lógica do Modal de Notificação ---
+            /* --- Lógica do Modal de Notificação ---
             openNotificationModal();
             document.getElementById('close-notification-btn').addEventListener('click', closeNotificationModal);
             document.getElementById('goto-video-btn').addEventListener('click', () => {
@@ -986,6 +1060,7 @@
             notificationModal.addEventListener('click', (event) => {
                 if (event.target === notificationModal) closeNotificationModal();
             });
+            */
 
 
             // --- Lógica para Rolagem Suave do Menu ---
@@ -1052,6 +1127,12 @@
                         icon.innerText = '-';
                     }
                 });
+            });
+
+            // --- Lógica do Loop de Contribuidores ---
+            document.querySelectorAll('.contributor-list').forEach(list => {
+                const items = list.innerHTML;
+                list.innerHTML += items; // Duplica os itens para um loop contínuo
             });
 
             // --- Lógica de Event Listeners dos Modais Principais ---
